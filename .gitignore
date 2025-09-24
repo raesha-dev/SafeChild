@@ -1,0 +1,15 @@
+*.env //ignore environment variable files
+    __pycache__/ //ignore python cache files
+    *.pyc //ignore compiled python files
+    instance/ //ignore instance folder
+    .vscode/ //ignore VSCode settings folder
+    .DS_Store //ignore macOS system file
+    .idea/ //ignore PyCharm settings folder
+    .pytest_cache/ //ignore pytest cache folder
+    .mypy_cache/ //ignore mypy cache folder
+    
+    .venv/ //ignore virtual environment folder
+    venv/ //ignore virtual environment folder
+    ENV/ //ignore virtual environment folder
+    env/ //ignore virtual environment folder
+    

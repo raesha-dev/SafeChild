@@ -1,0 +1,13 @@
+streamlit
+azure-communication-sms
+azure-core
+azure-cosmos
+python-dotenv
+pandas
+azure-communication-messages
+azure-identity
+azure-cognitiveservices-speech
+azure-ai-textanalytics
+azure-cosmos
+requests
+folium
