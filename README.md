@@ -11,3 +11,14 @@ This is where “Safe Child” or “Muskaan Suraksha” becomes urgent and nece
 Digital India principles, it transforms child protection from reactive to proactive. Through AI-driven triage, multilingual
 voice/text reporting, and real-time mapping, Safe child empowers communities to raise alerts instantly, while providing district
 officials and NGOs with live dashboards for intervention and policy action.
+The project aims to leverage the power of Azure Services to create this system.
+
+Tech Stack( Azure):
+Azure Communication Services - sms/calls
+Azure Cognitive Services - Text Analysis, Speech Services, NLP
+Translation Services
+Cosmos DB - storage
+Azure Maps - Real Time Mapping
+
+Frontend:
+Streamlit
