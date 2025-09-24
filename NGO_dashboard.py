@@ -11,6 +11,10 @@ import pandas as pd
 import os
 import folium
 import logging
+def rerun():
+    
+    st.warning("Please refresh the page to see updated data.")
+
 
 logging.basicConfig(level=logging.ERROR, format='%(asctime)s - %(levelname)s - %(message)s')
 
@@ -124,7 +128,7 @@ lottie_coding = load_lottieurl("https://raw.githubusercontent.com/raesha-dev/Saf
 # Header branding
 st.markdown("""
 <div class="main-header">
-    <h1>🛡️ SafeChild - NGO Dashboard</h1>
+    <h1> SafeChild - NGO Dashboard</h1>
     <p>Child Safety Report Management System</p>
 </div>
 """, unsafe_allow_html=True)
@@ -157,7 +161,7 @@ with st.sidebar:
     )
     if st.button("🔄 Reset Filters", use_container_width=True):
         clear_form()
-        st.experimental_rerun()
+        rerun()
 
     st.markdown("---")
 
@@ -231,7 +235,7 @@ if filtered_reports:
             with st.container():
                 st.markdown(f"""
                 <div class="case-card {urgency_class} {blacklist_class}">
-                    <h4>🆔 Case ID {r[0]}</h4>
+                    <h4>Case ID {r[0]}</h4>
                     <div style="margin: 1rem 0;">
                         <strong>📱 Helpline:</strong> {r[1]}<br>
                         <strong>📝 Report:</strong> {r[2]}<br>
@@ -274,7 +278,7 @@ if filtered_reports:
                         update_status(r[0], new_status)
                         st.success(f"✅ Case {r[0]} updated to {new_status}")
                         st.session_state.data_updated = True
-                        st.experimental_rerun()
+                        rerun()
                 st.markdown("---")
 
     with right_col:
@@ -332,7 +336,7 @@ if filtered_reports:
             - 🟠 Orange: Verified cases  
             - 🟢 Green: Resolved cases
             - 🔵 Blue: Normal pending cases
-            - ⚫ Black: Blacklisted locations
+            
             """)
         else:
             st.warning("No cases with valid location data to display on map")
@@ -348,7 +352,7 @@ else:
         """)
         if st.button("🔄 Refresh Data", use_container_width=True):
             st.session_state.data_updated = True
-            st.experimental_rerun()
+            rerun()
     with col2:
         default_map = folium.Map(location=[12.91, 74.85], zoom_start=12)
         st_folium(default_map, width=700, height=400)
@@ -364,4 +368,4 @@ st.markdown("""
 
 if st.session_state.data_updated:
     st.session_state.data_updated = False
-    st.experimental_rerun()
+    rerun()
