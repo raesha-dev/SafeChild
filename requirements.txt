@@ -11,3 +11,8 @@ azure-ai-textanalytics
 azure-cosmos
 requests
 folium
+azure-communication-messages
+azure-communication-callautomation
+azure-identity
+
+# plus your other deps

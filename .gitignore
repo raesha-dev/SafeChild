@@ -1,4 +1,5 @@
 *.env //ignore environment variable files
+.env
     __pycache__/ //ignore python cache files
     *.pyc //ignore compiled python files
     instance/ //ignore instance folder
